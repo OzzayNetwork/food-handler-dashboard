@@ -759,6 +759,7 @@ padding: 0px;
     
     body[data-sidebar=dark] .vertical-menu {
         background: #008134;
+        /* background: #2cb34a; */
     }
     
     .navbar-brand-box .logo-sm {
