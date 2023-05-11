@@ -268,6 +268,12 @@
                             </a>
                         </li>
 
+                        <li>
+                            <a href="clinics.html" class="waves-effect">
+                                <i class="mdi mdi-hospital-building"></i><span>Certified Clinics</span>
+                            </a>
+                        </li>
+
 
                         <li class="menu-title" key="t-pages">Reports</li>
                        
@@ -320,7 +326,7 @@
                             </ul>
                         </li>
 
-                        <li>
+                        <li class="d-none">
                             <a href="javascript: void(0);" class="waves-effect has-arrow">
                                 <i class="bx bx-slider"></i>
                                 <span>Settings & Setups</span>
@@ -385,19 +391,11 @@
 
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
                                         <h4 class="card-title text-capitalize mb-0 ">
-                                            All Doctors Report
+                                            Applicable tests for Food handler certificate Application
                                         </h4>
 
                                         <div class="d-flex">
-                                            <select class="form-control selectpicker w-auto  show-tick" data-style="btn btn-primary waves-light waves-effect month-picker" data-live-search="true" title="Select A month">
-                                                <option value="" selected>Mar 2022</option>
-                                                <option value="">Feb 2022</option>
-                                                <option value="">Jan 2022</option>
-                                                <option value="">Dec 2021</option>
-                                                <option value="">Nov 2021</option>
-                                                <option value="">Sep 2021</option>
-                                                <option value="">Oct 2021</option>
-                                          </select>
+                                            <button type="button" class="btn btn-success waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Add A Test</button>
 
                                         </div>
 
@@ -410,29 +408,23 @@
                                 <div class="card-body">
                                     <div class="table-responsive">
 
-                                        <table class="table align-middle table-hover  contacts-table table-striped " id="datatable-buttons">
+                                        <table class="table align-middle table-hover  contacts-table table-striped " id="">
                                             <thead class="table-light">
                                                 <tr class="table-dark">
-                                                    <th scope="col">#</th>
-                                                    <th scope="col">Doctor</th>
-                                                    <th scope="col">Tests Conducted</th>
-                                                    <th scope="col">Approved Applications</th>
-                                                    <th scope="col">Rejected Applications</th>
-                                                    <th scope="col" class="">Pending Applications</th>
+                                                    <th scope="col" width="40px">#</th>
+                                                    <th scope="col">Test</th>
+                                                    
                                                     <th></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <td class="text-capitalize text-nowrap">1.</td>
-                                                    <td class="text-capitalize">Dr Alex Kidevu</td>
-                                                    <td class="text-capitalize text-nowrap">23</td>
-                                                    <td class="text-capitalize text-nowrap">12</td>
-                                                    <td class="text-capitalize text-nowrap">11</td>
-                                                    <td class="text-capitalize text-nowrap">0</td>
+                                                    <td class="text-capitalize">Stool</td>
+                                                    
                                                     <td>
                                                         <div class="d-flex justify-content-end">
-                                                            <a type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" href="reports-doctor-details.html">View Details</a>
+                                                            <button type="button" class="btn btn-danger btn-sm waves-effect waves-light text-nowrap me-3" ><i class="mdi-trash-can-outline mdi"></i> Remove</button>
                                                             
                                                         </div>
                                                     </td>
@@ -440,14 +432,11 @@
 
                                                 <tr>
                                                     <td class="text-capitalize text-nowrap">2.</td>
-                                                    <td class="text-capitalize">Dr. Alex Kidevu</td>
-                                                    <td class="text-capitalize text-nowrap">23</td>
-                                                    <td class="text-capitalize text-nowrap">12</td>
-                                                    <td class="text-capitalize text-nowrap">11</td>
-                                                    <td class="text-capitalize text-nowrap">0</td>
+                                                    <td class="text-capitalize">	Urinalysis</td>
+                                                    
                                                     <td>
                                                         <div class="d-flex justify-content-end">
-                                                            <a type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" href="reports-doctor-details.html">View Details</a>
+                                                            <button type="button" class="btn btn-danger btn-sm waves-effect waves-light text-nowrap me-3" ><i class="mdi-trash-can-outline mdi"></i> Remove</button>
                                                             
                                                         </div>
                                                     </td>
@@ -455,75 +444,18 @@
 
                                                 <tr>
                                                     <td class="text-capitalize text-nowrap">3.</td>
-                                                    <td class="text-capitalize">Dr. John Mox</td>
-                                                    <td class="text-capitalize text-nowrap">23</td>
-                                                    <td class="text-capitalize text-nowrap">12</td>
-                                                    <td class="text-capitalize text-nowrap">11</td>
-                                                    <td class="text-capitalize text-nowrap">0</td>
-                                                    <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <a type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" href="reports-doctor-details.html">View Details</a>
-                                                            
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="text-capitalize text-nowrap">4.</td>
-                                                    <td class="text-capitalize">Dr Mary Ann</td>
-                                                    <td class="text-capitalize text-nowrap">23</td>
-                                                    <td class="text-capitalize text-nowrap">12</td>
-                                                    <td class="text-capitalize text-nowrap">11</td>
-                                                    <td class="text-capitalize text-nowrap">0</td>
-                                                    <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <a type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" href="reports-doctor-details.html">View Details</a>
-                                                            
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="text-capitalize text-nowrap">5.</td>
-                                                    <td class="text-capitalize">Dr. Teresa</td>
-                                                    <td class="text-capitalize text-nowrap">23</td>
-                                                    <td class="text-capitalize text-nowrap">12</td>
-                                                    <td class="text-capitalize text-nowrap">11</td>
-                                                    <td class="text-capitalize text-nowrap">0</td>
-                                                    <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <a type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" href="reports-doctor-details.html">View Details</a>
-                                                            
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-
-                                                
-                                            </tbody>
-                                            <tfoot class="table-dark">
-                                                <tr>
-
-                                                    <th colspan="2">
-                                                        5
-                                                    </th>
+                                                    <td class="text-capitalize">Salmonella Ag</td>
                                                     
-
-                                                    <th class="text-nowrap" colspan="">203</th>
-
-                                                   
-
-                                                    <td class="text-nowrap">
-                                                        <span class="fw-semibold ">104</span>
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button type="button" class="btn btn-danger btn-sm waves-effect waves-light text-nowrap me-3" ><i class="mdi-trash-can-outline mdi"></i> Remove</button>
+                                                            
+                                                        </div>
                                                     </td>
-                                                    <td class="text-nowrap ">
-                                                        <span class="fw-semibold ">40</span>
-                                                    </td>
-                                                    <td>59</td>
-                                                    <td></td>
                                                 </tr>
 
-                                            </tfoot>
+                                            </tbody>
+                                            
                                         </table>
                                     </div>
                                 </div>
@@ -541,136 +473,26 @@
 
             <!-- receipting modal -->
             <div class="modal fade receipting-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-dialog modal-md modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="myLargeModalLabel">Bill details</h5>
+                            <h5 class="modal-title" id="myLargeModalLabel">Add Food handler Test</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="row">
-                                <div class="col-6">
-                                    <address>
-                                        <strong class="text-capitalize">Bill Prepared for:</strong><br>
-                                        Kelvin Njuguna AT Mombasa Road<br>
-                                        email@mail.com, 0704 549 859<br>                                   
-                                        ID No. 12345689. Car Plate No. KAB 123P <br/>
-                                        <br>
-                                        On 1 Mar 2022, 10:20 AM
-                                        
-                                    </address>
-                                </div>
-                                <div class="col-sm-6 text-sm-end d-none">
-                                    <address class="mt-2 mt-sm-0">
-                                        <strong>Payment Method</strong><br>
-                                        <span class="fw-medium">MPESA</span><br>
-                                        Phone No. 0704 549 859<br> <br>
-                                        On 1 Mar 2022, 10:20 AM
-                                    </address>
-                                </div>
-
-                                <div class="col-6 text-right">
-                                    <address>
-                                        <strong class="text-capitalize">Location Details</strong><br>
-                                        Street/Road: Mombasa Road<br>
-                                        Plot No.: 122202/1250<br>                                   
-                                        Building: The Tower. Floor: 12. Door/Stall No.: 123<br/>
-                                        Subcounty: CBD. Ward: Mututu
-                                        
-                                        
-                                    </address>
-                                </div>
-                                
-                            </div>
-                            <div class="col-12">
-                                <div class="py-2 mt-3">
-                                    <h3 class="font-size-15 fw-bold">ND12368</h3>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="table-responsive">
-                                    <table class="table table-nowrap vertical-align-middle">
-                                        <thead class="bg-light">
-                                            <tr>
-                                                <th>More Details</th>
-                                                <th class="text-end"></th>
-                                                
-                                            </tr>
-                                        </thead>
-                                       
-                                        <tbody>
-                                            <tr title="Driving Without identification plates affixed or plates not fixed in the prescribed manner">
-                                                <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Serial Number</p>
-                                                </td>
-                                                <td class="">12WER345</td>
-                                                
-                                            </tr>
-
-                                            <tr title="Driving Without identification plates affixed or plates not fixed in the prescribed manner">
-                                                <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Business Owner(s)</p>
-                                                </td>
-                                                <td class="">John Doe Kamau, James Kuria Kimotho</td>
-                                                
-                                            </tr>
-
-                                            <tr >
-                                                <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Profession/Occupation</p>
-
-                                                </td>
-                                                <td class="">Food Processing</td>
-                                                
-                                            </tr>
-                                            <tr >
-                                                <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Application Date</p>
-
-                                                </td>
-                                                <td class="">5 Jan 2022 10:09 AM</td>
-                                                
-                                            </tr>
-
-                                            <tr >
-                                                <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Date Approved</p>
-
-                                                </td>
-                                                <td class="">11 Jan 2022 09:54 AM</td>
-                                                
-                                            </tr>
-
-                                            <tr >
-                                                <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Days To Expiry</p>
-
-                                                </td>
-                                                <td class="">134 Days</td>
-                                                
-                                            </tr>
-
-                                            <tr class="table-danger">
-                                                <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Amount Charged</p>
-
-                                                </td>
-                                                <td class="text-uppercase">KES 1,000</td>
-                                                
-                                            </tr>
-
-
-
-                                            
-                                        </tbody>
-                                    </table>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="formrow-firstname-input" class="form-label">Test Name</label>
+                                        <input type="text" class="form-control" id="formrow-firstname-input" placeholder="Enter Test name">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
                            
-                            <a href="PrintDocs/Bill/bill.html"  type="button" target="_blank" class="btn btn-primary waves-effect waves-light">
-                                <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Bill
+                            <a href="#"  type="button" target="_blank" class="btn btn-primary waves-effect waves-light w-100">
+                                <i class="mdi mdi-content-save-outline font-size-16 align-middle me-2"></i> Save
                             </a>
                         </div>
                     </div>
