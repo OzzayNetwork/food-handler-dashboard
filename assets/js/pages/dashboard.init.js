@@ -88,7 +88,7 @@ var options = {
 chart.render();
 options = {
     chart: {
-        height: 200,
+        height: 250,
         type: "radialBar",
         offsetY: -10
     },
@@ -100,10 +100,10 @@ options = {
                 name: {
                     fontSize: "13px",
                     color: void 0,
-                    offsetY: 60
+                    offsetY: 80
                 },
                 value: {
-                    offsetY: 22,
+                    offsetY: 2,
                     fontSize: "16px",
                     color: void 0,
                     formatter: function(e) {
@@ -129,6 +129,6 @@ options = {
         dashArray: 4
     },
     series: [67],
-    labels: ["Inactive Licenses"]
+    labels: ["Inactive Certificates"]
 };
 (chart = new ApexCharts(document.querySelector("#radialBar-chart"), options)).render();

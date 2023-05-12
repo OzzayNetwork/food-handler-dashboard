@@ -643,15 +643,15 @@
 
                     <!-- more charts -->
                     <div class="row d-non">
-                        <div class="col-xl-7 px-sm-30px">
+                        <div class="col-xl-6 col-lg-7 col-sm-12 px-sm-30px">
                             <div class="card calc-23">
                                 <div class="card-body">
                                     <div class="clearfix">
                                         <div class="float-end d-flex ">
                                             <div class="input-group input-group-sm mx-3 d-non">
                                                 <select class="form-select form-select-sm filter-by">
-                                                    <option value="Violations">Expenditure</option>
-                                                    <option value="Revenue" selected>Remittance</option>
+                                                    <option value="Violations">Expired Certificates</option>
+                                                    <option value="Revenue" selected>Revenue</option>
                                                 </select>
                                                 <label class="input-group-text">Filter By</label>
                                             </div>
@@ -675,21 +675,42 @@
 
                                     <div id="Map-data" class="h-80" dir="ltr"></div>
                                 </div>
+                               
+                                <div class="card-body border-top px-4 pt-4">
+                                    <h4 class="card-title mb-4">Inactive Certificates</h4>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <p class="text-muted">Inactive Certificates</p>
+                                            <h3>945</h3>
+                                            <p class="text-muted"><span class="text-success me-2"> 12% <i class="mdi mdi-arrow-up"></i> </span> Renewed This Month</p>
+
+                                            <div class="mt-4">
+                                                <a href="cert-inactive.html" class="btn btn-primary waves-effect waves-light btn-sm">Inactive Certificates <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="mt-4 mt-sm-0">
+                                                <div id="radialBar-chart" data-colors='["--bs-primary"]' class="apex-charts"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <!--end card-->
                         </div>
                         
-                        <div class="col-5">
+                        <div class="col-xl-6 col-lg-5 col-sm-12">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="card">
                                         <div class="card-header bg-white border-bottom">
-                                            <div class="float-end d-none">
+                                            <div class="float-end">
                                                 <select class="form-select form-select-sm ms-2">
-                                                    <option value="MA" selected>March</option>
-                                                    <option value="FE">February</option>
-                                                    <option value="JA">January</option>
-                                                    <option value="DE">December</option>
+                                                    <option value="MA" selected>All Sub Counties</option>
+                                                    <option value="FE">Westlands</option>
+                                                    <option value="JA">Roysambu</option>
+                                                    <option value="DE">Kibra</option>
+                                                    <option value="DE">Langata</option>
                                                 </select>
                                             </div>
                                             <h4 class="card-title mb-3">Certificate Applications By Stages</h4>
@@ -751,15 +772,30 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="card-footer bg-transparent border-top">
+                                            <div class="text-center">
+                                                <a href="applications.html" class="btn btn-dark waves-effect waves-light"> View Applications</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="col-xl-12">
                                     <div class="card">
+                                        <div class="card-header bg-white border-bottom">
+                                            <div class="float-end d-non">
+                                                <select class="form-select form-select-sm ms-2">
+                                                    <option value="MA" selected>March</option>
+                                                    <option value="FE">February</option>
+                                                    <option value="JA">January</option>
+                                                    <option value="DE">December</option>
+                                                </select>
+                                            </div>
+                                            <h4 class="card-title mb-3">Appointments Fullfilment by Clinics</h4>
+                                        </div>
                                         <div class="card-body">
-                                            <h4 class="card-title mb-4">Organizations Compliance Rate</h4>
     
-                                            <ul class="nav nav-pills bg-light rounded d-non" role="tablist">
+                                            <ul class="nav nav-pills bg-light rounded d-none" role="tablist">
                                                 <li class="nav-item" role="presentation">
                                                     <a class="nav-link active" data-bs-toggle="tab" href="#transactions-all-tab" role="tab" aria-selected="true">Bottom 7</a>
                                                 </li>
@@ -770,28 +806,28 @@
                                                     <a class="nav-link" data-bs-toggle="tab" href="#transactions-sell-tab" role="tab" aria-selected="false" tabindex="-1">Sell</a>
                                                 </li>
                                             </ul>
-                                            <div class="tab-content mt-4">
+                                            <div class="tab-content mt-">
                                                 <div class="tab-pane active" id="transactions-all-tab" role="tabpanel">
                                                     <div class="table-responsive" data-simplebar="init" style="max-height: 330px;"><div class="simplebar-wrapper" style="margin: 0px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: -15px; bottom: -15px;"><div class="simplebar-content-wrapper" style="height: auto; overflow: scroll;"><div class="simplebar-content" style="padding: 0px;">
                                                         <table class="table align-middle table-nowrap">
                                                             <tbody>
                                                                 <tr>
                                                                     <td style="width: 50px;">
-                                                                        <div class="font-size-22 text-danger">
-                                                                            <i class="bx bx-down-arrow-circle"></i>
+                                                                        <div class="font-size-22 text-success">
+                                                                            <i class="bx bx-up-arrow-circle"></i>
                                                                         </div>
                                                                     </td>
     
                                                                     <td>
                                                                         <div>
-                                                                            <h5 class="font-size-14 mb-1">Mombasa Cement Limited</h5>
-                                                                            <p class="text-muted mb-0 d-none">345 Member sacco Cars</p>
+                                                                            <h5 class="font-size-14 mb-1">Kenyatta Hospital</h5>
+                                                                            <p class="text-muted mb-0 d-none">39 Appointments</p>
                                                                         </div>
                                                                     </td>
     
                                                                     <td>
                                                                         <div class="text-end">
-                                                                            <h5 class="font-size-14 mb-0">36% Compliance</h5>
+                                                                            <h5 class="font-size-14 mb-0">36 Appointments</h5>
                                                                         </div>
                                                                     </td>
                                                                 </tr>
@@ -805,14 +841,14 @@
     
                                                                     <td>
                                                                         <div>
-                                                                            <h5 class="font-size-14 mb-1">Tuskys</h5>
+                                                                            <h5 class="font-size-14 mb-1">Sipital Kuu Medical Center</h5>
                                                                             <p class="text-muted mb-0 d-none">450 Cars</p>
                                                                         </div>
                                                                     </td>
     
                                                                     <td>
                                                                         <div class="text-end">
-                                                                            <h5 class="font-size-14 mb-0 text-right">30% Compliance</h5>
+                                                                            <h5 class="font-size-14 mb-0 text-right">30 Appointments</h5>
                                                                         </div>
                                                                     </td>
                                                                 </tr>
@@ -826,14 +862,14 @@
     
                                                                     <td>
                                                                         <div>
-                                                                            <h5 class="font-size-14 mb-1">Amref Health Africa</h5>
+                                                                            <h5 class="font-size-14 mb-1">Ubora Hospital</h5>
                                                                             <p class="text-muted mb-0 d-none">324 Cars</p>
                                                                         </div>
                                                                     </td>
     
                                                                     <td>
                                                                         <div class="text-end">
-                                                                            <h5 class="font-size-14 mb-0">25% Compliance</h5>
+                                                                            <h5 class="font-size-14 mb-0">25 Appointments</h5>
                                                                         </div>
                                                                     </td>
     
@@ -849,14 +885,14 @@
     
                                                                     <td>
                                                                         <div>
-                                                                            <h5 class="font-size-14 mb-1">Equity Group Holdings</h5>
+                                                                            <h5 class="font-size-14 mb-1">Afya Bora Hospital</h5>
                                                                             <p class="text-muted mb-0 d-none">1,020 Cars</p>
                                                                         </div>
                                                                     </td>
     
                                                                     <td>
                                                                         <div class="text-end">
-                                                                            <h5 class="font-size-14 mb-0">22% Compliance</h5>
+                                                                            <h5 class="font-size-14 mb-0">22 Appointments</h5>
                                                                         </div>
                                                                     </td>
     
@@ -872,65 +908,21 @@
     
                                                                     <td>
                                                                         <div>
-                                                                            <h5 class="font-size-14 mb-1">One Acre Fund</h5>
-                                                                            <p class="text-muted mb-0 d-none">560 Cars</p>
+                                                                            <h5 class="font-size-14 mb-1">The County Lab</h5>
+                                                                            <p class="text-muted mb-0 d-none">56 Appoint</p>
                                                                         </div>
                                                                     </td>
     
                                                                     <td>
                                                                         <div class="text-end">
-                                                                            <h5 class="font-size-14 mb-0">21% Compliance</h5>
+                                                                            <h5 class="font-size-14 mb-0">21 Appointments</h5>
                                                                         </div>
                                                                     </td>
     
                                                                     
                                                                 </tr>
     
-                                                                <tr>
-                                                                    <td style="width: 50px;">
-                                                                        <div class="font-size-22 text-danger">
-                                                                            <i class="bx bx-down-arrow-circle"></i>
-                                                                        </div>
-                                                                    </td>
-    
-                                                                    <td>
-                                                                        <div>
-                                                                            <h5 class="font-size-14 mb-1">Price Water House Coopers</h5>
-                                                                            <p class="text-muted mb-0 d-none">60 Cars</p>
-                                                                        </div>
-                                                                    </td>
-    
-                                                                    <td>
-                                                                        <div class="text-end">
-                                                                            <h5 class="font-size-14 mb-0">29.5% Compliance</h5>
-                                                                        </div>
-                                                                    </td>
-    
-                                                                    
-                                                                </tr>
-    
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="font-size-22 text-success">
-                                                                            <i class="bx bx-up-arrow-circle"></i>
-                                                                        </div>
-                                                                    </td>
-    
-                                                                    <td>
-                                                                        <div>
-                                                                            <h5 class="font-size-14 mb-1">Nation Media Group</h5>
-                                                                            <p class="text-muted mb-0 d-none">30 Cars</p>
-                                                                        </div>
-                                                                    </td>
-    
-                                                                    <td>
-                                                                        <div class="text-end">
-                                                                            <h5 class="font-size-14 mb-0">19% Compliance</h5>
-                                                                        </div>
-                                                                    </td>
-    
-                                                                    
-                                                                </tr>
+                                                               
                                                             </tbody>
                                                         </table>
                                                     </div></div></div></div><div class="simplebar-placeholder" style="width: auto; height: 473px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: visible;"><div class="simplebar-scrollbar" style="transform: translate3d(0px, 0px, 0px); display: block; width: 196px;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: visible;"><div class="simplebar-scrollbar" style="height: 230px; transform: translate3d(0px, 0px, 0px); display: block;"></div></div></div>
@@ -1296,6 +1288,11 @@
                                                     </div></div></div></div><div class="simplebar-placeholder" style="width: 0px; height: 0px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="transform: translate3d(0px, 0px, 0px); display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: hidden;"><div class="simplebar-scrollbar" style="transform: translate3d(0px, 0px, 0px); display: none;"></div></div></div>
                                                 </div>
                                                 
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bg-transparent border-top">
+                                            <div class="text-center">
+                                                <a href="reports-clinic.html" class="btn btn-primary waves-effect waves-light"> View More</a>
                                             </div>
                                         </div>
                                     </div>
