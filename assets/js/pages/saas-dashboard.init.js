@@ -142,7 +142,7 @@ var radialoptions3 = {
 radialchart3.render();
 
 var walletOptions = {
-  series: [25, 40, 35],
+  series: [7, 8, 26,59],
   chart: {
       height: 302,
       type: "radialBar"
@@ -154,7 +154,7 @@ var walletOptions = {
           endAngle: 270,
           hollow: {
               margin: 5,
-              size: "35%",
+              size: "25%",
               background: "transparent",
               image: void 0
           },
@@ -163,15 +163,15 @@ var walletOptions = {
               startAngle: void 0,
               endAngle: void 0,
               background: "#f2f2f2",
-              strokeWidth: "97%",
+              strokeWidth: "100%",
               opacity: 1,
-              margin: 12,
+              margin: 10,
               dropShadow: {
                   enabled: !1,
                   top: 0,
                   left: 0,
                   blur: 3,
-                  opacity: .5
+                  opacity: .8
               }
           },
           dataLabels: {
@@ -208,8 +208,8 @@ var walletOptions = {
   stroke: {
       lineCap: "round"
   },
-  colors: ["#3452e1", "#f1b44c", "#50a5f1"],
-  labels: ["Cash", "MPESA", "Bank"],
+  colors: ["#f1b44c", "#50a5f1", "#34c38f","#f46a6a"],
+  labels: ["Pending Test", "Pending Verdict", "Approved","Rejected"],
   legend: {
       show: !1
   }
