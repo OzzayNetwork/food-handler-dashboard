@@ -2,7 +2,9 @@
 
 
 //changing map type
-var chartDate="All Time", chartProd="Ethernal",chartmvt_type="Sales Perfomance(%)",min=10000, max=9000000,filter_by="Violations",mapData
+var chartDate="All Time",selectedCounty, chartProd="Ethernal",chartmvt_type="Sales Perfomance(%)",min=10000, max=9000000,filter_by="Violations",mapData
+
+
 
 
 // the map data for diffrent counties
@@ -516,6 +518,58 @@ var KerichoMapData=[
       "path": "M59,86,63,78,64,78,66,77,66,77,67,76,66,75,66,74,66,73,66,72,67,71,67,70,67,70,68,70,69,70,71,71,71,71,72,70,73,69,74,69,74,68,75,69,76,69,77,70,78,69,79,70,80,71,81,71,81,73,81,74,81,75L83,75L83,76L83,77L83,78,84,79,84,80,84,82,84,82,85,82,85,83,86,85,86,86L91,86L91,85,92,86,92,86,93,88,95,90,97,92,98,92,98,91,98,90,99,90,99,91,100,92,100,93,100,94,103,97,104,97,107,102,107,103,107,103,107,104,106,104,106,105,106,107,105,108,104,110,104,111,103,111,103,112,103,113,103,114,104,115,104,116,104,116,105,118,105,118,105,119,104,119,104,118,103,118,102,118,101,118,101,118,100,117,100,117,99,117,99,118,98,118,97,118,97,118,97,119L97,119L97,120,97,120,96,121,96,122,97,123,96,123,96,123,95,124,95,124L95,124L94,124,94,125L94,125L93,125,87,125,86,125,84,125,83,125,83,124,83,124,82,122,82,121,81,120,80,119,80,118,80,117,79,117,78,115,77,114,77,113,77,113,76,113,76,111,75,111,74,109,73,107,72,106,72,106,71,105,71,103,70,103,70,102,69,101,68,100,68,99,67,98,67,97,67,96,66,96,65,95,64,93,63,93,63,92,62,91,62,90,61,90,61,89,60,89,60,88,60,87,59,87z"
     }
   ]
+
+  //changing the county
+  selectedCounty=kisiiMapData
+$('.filter-by-county').on('change', function(){
+    selectedCounty=$(this).val()
+    //alert(selectedCounty)
+
+    if(selectedCounty=="kisii"){
+        selectedCounty=kisiiMapData
+    }
+
+    if(selectedCounty=="kericho"){
+        selectedCounty=KerichoMapData
+    }
+
+    if(selectedCounty=="Mombasa"){
+        selectedCounty=MombasaCountyMapData
+    }
+
+    if(selectedCounty=="Nairobi"){
+        selectedCounty=NairobiMapData
+    }
+
+    if(selectedCounty=="Meru"){
+        selectedCounty=MeruCountyMapData
+    }
+
+    if(selectedCounty=="Nakuru"){
+        selectedCounty=NakuruCountyMapData
+    }
+
+    if(selectedCounty=="Busia"){
+        selectedCounty=BusiaCountyMapData
+    }
+
+    if(selectedCounty=="Homabay"){
+        selectedCounty=homaBayMapData
+    }
+
+    if(selectedCounty=="Laikipia"){
+        selectedCounty=LaikipiaMapData
+    }
+
+   
+
+    Mapchart.series[0].update({
+        "mapData":selectedCounty
+        
+    })
+    console.log(selectedCounty)
+
+})
 // end of map data for diffrent counties
 function changingLegendTitle(){
     Mapchart.legend.title.attr({
@@ -987,7 +1041,7 @@ const Mapchart=Highcharts.mapChart('Map-data', {
             style: {
                 fontFamily: '"Poppins",sans-serif'
             },
-           "mapData": kisiiMapData,
+           "mapData": selectedCounty,
             "data": [
                 {
                     //Langata north
